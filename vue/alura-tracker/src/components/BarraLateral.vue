@@ -3,14 +3,13 @@
     <h1>
       <img src="../assets/logo.png" alt="logo alura tracker" />
     </h1>
-    <button class="button" @click="alterarTema">
-      {{ textoBotao }}
-    </button>
+    <BotaoIcone @acao="alterarTema" :icon="iconeClass" />
   </header>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import BotaoIcone from "./BotaoIcone.vue";
 
 export default defineComponent({
   name: "BarraLateral",
@@ -21,11 +20,11 @@ export default defineComponent({
     };
   },
   computed: {
-    textoBotao() {
+    iconeClass() {
       if (this.modoEscuroAtivo) {
-        return "Desativar modo escuro";
+        return "fa-solid fa-moon";
       }
-      return "Ativar modo escuro";
+      return "fa-solid fa-sun";
     },
   },
   methods: {
@@ -34,6 +33,7 @@ export default defineComponent({
       this.$emit("aoTemaAlterado", this.modoEscuroAtivo);
     },
   },
+  components: { BotaoIcone },
 });
 </script>
 
