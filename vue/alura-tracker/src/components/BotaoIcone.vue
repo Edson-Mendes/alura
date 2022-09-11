@@ -1,9 +1,7 @@
 <template>
-  <button class="button" @click="acao">
-    <span class="icon">
-      <i :class="icon"></i>
-    </span>
-  </button>
+  <span class="icon" @click="acao" :style="estilo">
+    <i :class="icon"></i>
+  </span>
 </template>
 
 <script lang="ts">
@@ -14,6 +12,10 @@ export default defineComponent({
   emits: ["acao"],
   props: {
     icon: {
+      type: String,
+      required: true,
+    },
+    estilo: {
       type: String,
       default: "",
     },

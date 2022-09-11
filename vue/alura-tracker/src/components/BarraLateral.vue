@@ -3,7 +3,11 @@
     <h1>
       <img src="../assets/logo.png" alt="logo alura tracker" />
     </h1>
-    <BotaoIcone @acao="alterarTema" :icon="iconeClass" />
+    <BotaoIcone
+      @acao="alterarTema"
+      :icon="iconeClass"
+      :estilo="'color: green;'"
+    />
   </header>
 </template>
 

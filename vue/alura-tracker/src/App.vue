@@ -13,6 +13,7 @@
           v-for="(tarefa, index) in tarefas"
           :key="index"
           :tarefa="tarefa"
+          @ao-deletar="deletarTarefa(index)"
         />
         <Box v-if="listaEstaVazia"> Você não está muito produtivo hoje :( </Box>
       </div>
@@ -47,6 +48,9 @@ export default defineComponent({
     },
     trocarTema(modoEscuroAtivo: boolean) {
       this.modoEscuroAtivo = modoEscuroAtivo;
+    },
+    deletarTarefa(indice: number) {
+      console.log("Deletando elemento ", indice);
     },
   },
   components: {
