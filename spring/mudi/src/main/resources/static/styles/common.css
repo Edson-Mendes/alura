@@ -1,0 +1,16 @@
+.jumbotron {
+  padding: 2rem 1rem;
+  
+  background-color: #fff4ea;
+  border-radius: .3rem;
+}
+
+.logo-container{
+	background-color: #47bcff;
+	color: #fff;
+}
+
+.logo{
+	font-family: 'Handlee', cursive;
+	font-size: 2rem;
+}
