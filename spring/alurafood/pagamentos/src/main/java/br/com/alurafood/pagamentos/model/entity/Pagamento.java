@@ -14,7 +14,7 @@ import javax.validation.constraints.Size;
 import java.math.BigDecimal;
 
 @Entity
-@Table(name = "pagamanetos")
+@Table(name = "pagamentos")
 @Getter
 @Setter
 @AllArgsConstructor
